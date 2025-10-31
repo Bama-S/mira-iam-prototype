@@ -4,7 +4,7 @@ A Mīmāṃsā-inspired theorem prover for AWS IAM policies.
 
 **Key Advantage**: Detects **intent violations ($V$)** that Zelkova misses.
 
-[Full Comparison Table →](./docs/comparison.md) | [Run Demo](./aws_demo.py)
+[Full Comparison Table →](/.docs/comparison.md) | [Run Demo](./aws_demo.py)
 
 
 ## Files
@@ -13,3 +13,5 @@ A Mīmāṃsā-inspired theorem prover for AWS IAM policies.
 - aws_demo.py: S3 IP access demo
 
 License: MIT
+
+
