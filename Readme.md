@@ -1,10 +1,5 @@
 # MIRA Prototype for AWS IAM Verification
 
-A Mīmāṃsā-inspired framework for imperative policy sequencing and intent evaluation.
-
-## Quick Run
-# MIRA Prototype: Intent-Aware IAM Verification
-
 A Mīmāṃsā-inspired theorem prover for AWS IAM policies.
 
 **Key Advantage**: Detects **intent violations ($V$)** that Zelkova misses.
