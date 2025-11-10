@@ -1,5 +1,5 @@
 # Hybrid Zelkova–MIRA Policy Evaluation Report
-_Generated on 2025-11-09 18:40:02_
+**Sample output of hybrid.py**
 
 This report combines **Zelkova logical verification** (SAT/UNSAT) with **MIRA intent-aware evaluation** (S/V/N).
 
