@@ -1,5 +1,5 @@
 # zelkova_s3_ip_analysis_cidr.py
-# This is a sample code that checks whether the policy is correct
+# This is a sample code that checks whether the policy is correct and returns SAT/UNSAT
 from z3 import *
 import ipaddress
 

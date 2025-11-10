@@ -7,7 +7,7 @@
 | **Goal Tracking**       | 0             | 1                  | **+1**      | MIRA chains goals explicitly               |
 | **Violation Types**     | 1             | 2                  | **+100%**   | `V` vs. `N` distinction                |
 | **Expressiveness Score**| 1.0           | **1.3**            | **+30%**    | Intent + 3-valued logic                    |
-| **Runtime**             | O(n log n) avg | **O(n)**           | **Faster**  | Linear chaining vs. SMT overhead           |
+
 
 ## Justification of Each Metric
 
