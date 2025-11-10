@@ -1,4 +1,4 @@
- # MIRA vs. Zelkova & Cedar: Detailed Comparison
+ # Zelkova–MIRA Extension Metrics
 
 | Metric                  | Zelkova/Cedar | MIRA               | Improvement | Case Study Insight (External IP S3 Access) |
 |-------------------------|---------------|--------------------|-------------|--------------------------------------------|
@@ -35,10 +35,6 @@
 - **Formula**: 1.0 × (1 + 0.3) = **1.3**
 - **Justification**: We define expressiveness as the ability to produce **actionable, nuanced diagnostics**. The 0.3 factor comes from the combination of 3-valued outputs and intent tracking, validated empirically: MIRA reduces ambiguity by ~30% in sequencing tasks (Srinivasan, 2025, Section 2). In the S3 case, UNSAT becomes `V` — a 30% richer signal.
 - **Citation**: Sequencing chain (Srinivasan, 2025).
-
-### 6. **Runtime: Faster**
-- **Justification**: MIRA’s Arthakrama chaining operates in **linear time O(n)**, processing each instruction sequentially. Z3’s SMT solver, used by Zelkova, has an average complexity of O(n log n) but can degrade to exponential 2^O(n) in worst-case quantified formulas. For typical IAM policy sequences (e.g., n=3 steps), MIRA’s linear approach outperforms Z3’s constraint-solving overhead, as proven by the validity theorem for sequencing.
-- **Citation**: Linear O(n) complexity (Srinivasan, 2025, Section 5).
 
 ---
 

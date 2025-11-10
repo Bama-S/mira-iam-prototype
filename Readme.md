@@ -1,17 +1,80 @@
-# MIRA Prototype for AWS IAM Verification
+# 🧠 MIRA–Zelkova Hybrid Reasoning Framework
 
-A Mīmāṃsā-inspired theorem prover for AWS IAM policies.
+This repository contains a **goal- and intent-aware reasoning framework** that extends AWS Zelkova-style declarative policy verification with **Mīmāṃsā-Inspired Representation of Actions (MIRA)** semantics.
 
-**Key Advantage**: Detects **intent violations ($V$)** that Zelkova misses.
+Zelkova and Cedar perform **binary (SAT/UNSAT)** analysis of IAM policies.  
+MIRA introduces a **three-valued logic (S, V, N)** based on intention and goal execution, enabling deeper interpretability of policy outcomes.
 
-[Full Comparison Table →](/.docs/comparison.md) | [Run Demo](./aws_demo.py)
+---
+
+## 📁 Repository Structure
+
+mira-iam-prototype/
+│
+├── src/
+│ ├── mira_instruction_svn/
+│ │ ├── instruction.py
+│ │ ├── sequence.py
+│ │ └── aws_demo.py
+│ │
+│ └── mira_zelkova/
+│ ├── wzel.py
+│ ├── wzel2.py
+│ └── hybrid.py
+│
+├── reports/
+│ ├── mira_zelkova_report.md
+│ └── zelkova_mira_extension_metrics.md
+│
+│
+└── README.md
 
 
-## Files
-- instruction.py: Core triplet logic
-- sequence.py: Sequencing methods (Arthakrama)
-- aws_demo.py: S3 IP access demo
+---
 
-License: MIT
+## 🚀 How to Run
 
+### 1 **MIRA Instructional Reasoning (Standalone)**
 
+Implements MIRA’s **pure intention–goal–action semantics**, following the  
+Mīmāṃsā-Inspired Representation of Actions (S / V / N logic).
+
+```bash
+cd src/mira_instruction_svn
+python3 aws_demo.py
+
+##Description
+
+- instruction.py – core MIRA instruction class (defines S, V, N evaluation)
+
+- sequence.py – supports sequential and temporal reasoning
+
+- aws_demo.py – demonstration with example MIRA instructions (no Zelkova dependency)
+
+##Output:
+- Produces step-by-step MIRA reasoning trace showing Success (S), Violation (V), and Neutral (N) outcomes for each action sequence.
+
+### 2 **Hybrid MIRA–Zelkova Reasoning (Z3-Based)**
+Integrates Zelkova’s SMT-based policy verification with MIRA’s intent semantics.
+```bash
+cd src/mira_zelkova
+python3 hybrid.py
+
+##Description
+
+- wzel.py and wzel2.py – experimental Zelkova-style verifiers using Z3 solver
+
+- hybrid.py – unified hybrid verifier that outputs both:
+
+- Zelkova results (SAT / UNSAT for logical safety)
+
+- MIRA interpretation (S / V / N for intent analysis)
+
+##Output:
+
+- Prints a hybrid table in the console
+
+| Report                                    | Description                                                      | Link                                                                           |
+| :---------------------------------------- | :--------------------------------------------------------------- | :----------------------------------------------------------------------------- |
+| **Hybrid Zelkova–MIRA Evaluation Report** | Policy-level verification results with intent semantics          | [mira_zelkova_report.md](reports/mira_zelkova_report.md)                       |
+| **Zelkova–MIRA Extension Metrics**        | Quantitative metrics showing how MIRA augments Zelkova and Cedar | [zelkova_mira_extension_metrics.md](reports/zelkova_mira_extension_metrics.md) |
