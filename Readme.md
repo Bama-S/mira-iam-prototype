@@ -87,13 +87,12 @@ python3 hybrid.py
 ## Install dependencies:
 pip install z3-solver prettytable
 
-🪶 License
+## 🪶 License
 
 Released under the MIT License.
 
 ## Citation
 
-1.Bama Srinivasan and Ranjani Parthasarathi. A formalism to specify unambiguous instruc-
-tions inspired by Mīmām̃sā in computational settings. Logica Universalis, 16:275–305, 2021. 
+1.Bama Srinivasan and Ranjani Parthasarathi. A formalism to specify unambiguous instructions inspired by Mīmām̃sā in computational settings. Logica Universalis, 16:275–305, 2021. 
 
 2.Bama Srinivasan. A Mīmāmsā inspired framework for instruction sequencing in AI agents, arXiv preprint arXiv:2510.17691, 2025.
